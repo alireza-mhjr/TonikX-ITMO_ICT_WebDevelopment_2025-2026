@@ -1,0 +1,1087 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../task4/">
+      
+      
+        <link rel="next" href="../conclusion/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Task 5 - WEB-programming lab 1</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#5-web-get-post" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="WEB-programming lab 1" class="md-header__button md-logo" aria-label="WEB-programming lab 1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            WEB-programming lab 1
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Task 5
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../task1/" class="md-tabs__link">
+          
+  
+  
+  1 lab
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../conclusion/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Conclusion
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="WEB-programming lab 1" class="md-nav__button md-logo" aria-label="WEB-programming lab 1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    WEB-programming lab 1
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    1 lab
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            1 lab
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../task1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Task 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../task2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Task 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../task3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Task 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../task4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Task 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Task 5
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Task 5
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Краткое описание задания
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Стек реализации
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Как запускать
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server" class="md-nav__link">
+    <span class="md-ellipsis">
+      server
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#server-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      server code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      server output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#client" class="md-nav__link">
+    <span class="md-ellipsis">
+      client
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="client">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#client-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      client code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conclusion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conclusion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Краткое описание задания
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Стек реализации
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Как запускать
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server" class="md-nav__link">
+    <span class="md-ellipsis">
+      server
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#server-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      server code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      server output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#client" class="md-nav__link">
+    <span class="md-ellipsis">
+      client
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="client">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#client-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      client code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="5-web-get-post">Задание 5: Web-сервер для обработки GET и POST запросов</h1>
+<h2 id="_1">Краткое описание задания</h2>
+<p>Реализовать веб-сервер, который принимает и записывает информацию о дисциплинах и оценках через POST-запросы и отображает их через GET-запросы.</p>
+<h2 id="_2">Стек реализации</h2>
+<ul>
+<li>Язык: Python</li>
+<li>Библиотека: socket</li>
+<li>Протокол: HTTP</li>
+</ul>
+<h2 id="_3">Как запускать</h2>
+<ol>
+<li>Запустите сервер:
+   <code>bash
+   python server1.py</code></li>
+<li>Для добавления данных используйте <code>curl</code> или другой HTTP-клиент:</li>
+</ol>
+<p><code>curl -d '{"discipline":"Math","mark":"A"}' -H "Content-Type: application/json" -X POST http://127.0.0.1:14905/</code></p>
+<p>or</p>
+<p><code>bash
+   python client1.py</code></p>
+<ol>
+<li>Для просмотра данных откройте браузер и перейдите по адресу:</li>
+</ol>
+<pre><code class="language-bash">http://127.0.0.1:14905/
+</code></pre>
+<h2 id="server">server</h2>
+<h3 id="server-code">server code</h3>
+<pre><code class="language-python">import socket
+import traceback
+import json
+import os
+
+
+class Request:
+    def __init__(self, method, target, version, headers, body):
+        self.method = method
+        self.target = target
+        self.version = version
+        self.headers = headers
+        self.body = body
+
+
+class Response:
+    def __init__(self, status, reason, headers=None, body=None):
+        self.status = status
+        self.reason = reason
+        self.headers = headers or b&quot;&quot;
+        self.body = body or b&quot;&quot;
+
+
+class MyHTTPServer:
+    def __init__(self, host, port, coding=&quot;utf-8&quot;):
+        self.host = host
+        self.port = port
+        self.coding = coding
+        self.data_file = &quot;task5/server/grades.json&quot;
+        self.sock = None  # نگه داشتن socket برای بسته شدن هنگام Ctrl+C
+
+    def serve_forever(self):
+        self.sock = socket.socket()
+        self.sock.bind((self.host, self.port))
+        self.sock.listen(5)
+        print(f&quot;Server running on {self.host}:{self.port}&quot;)
+
+        try:
+            while True:
+                conn, addr = self.sock.accept()
+                self.serve_client(conn, addr)
+        except KeyboardInterrupt:
+            print(&quot;\nServer interrupted by user. Shutting down...&quot;)
+        finally:
+            if self.sock:
+                self.sock.close()
+
+    def serve_client(self, conn, addr):
+        print(f&quot;Connection from {addr}&quot;)
+        conn.settimeout(5)
+
+        try:
+            request = self.parse_request(conn)
+            response = self.handle_request(request)
+        except Exception:
+            traceback.print_exc()
+            response = Response(400, &quot;Bad Request&quot;)
+        finally:
+            self.send_response(conn, response)
+            conn.close()
+
+    def parse_request(self, conn) -&gt; Request:
+        data = conn.recv(65535)
+        if not data:
+            raise ValueError(&quot;empty request&quot;)
+
+        header_data, _, body_data = data.partition(b&quot;\r\n\r\n&quot;)
+        header_text = header_data.decode(self.coding, errors=&quot;replace&quot;)
+
+        lines = header_text.split(&quot;\r\n&quot;)
+        method, url, version = lines[0].split(&quot; &quot;)
+
+        headers = {}
+        for line in lines[1:]:
+            if line.strip():
+                key, value = line.split(&quot;:&quot;, 1)
+                headers[key.strip()] = value.strip()
+
+        body = {}
+        if headers.get(&quot;Content-Length&quot;):
+            content_type = headers.get(&quot;Content-Type&quot;, &quot;&quot;)
+            body_text = body_data.decode(self.coding, errors=&quot;replace&quot;)
+
+            if content_type.startswith(&quot;application/json&quot;):
+                body = json.loads(body_text)
+            elif content_type.startswith(&quot;application/x-www-form-urlencoded&quot;):
+                body = {}
+                for pair in body_text.split(&quot;&amp;&quot;):
+                    if &quot;=&quot; in pair:
+                        key, value = pair.split(&quot;=&quot;, 1)
+                        body[key] = value.replace(&quot;+&quot;, &quot; &quot;)
+
+        return Request(method, url, version, headers, body)
+
+    def load_data(self):
+        if os.path.exists(self.data_file):
+            with open(self.data_file, &quot;r&quot;, encoding=self.coding) as f:
+                return json.load(f)
+        return {}
+
+    def save_data(self, data: dict):
+        with open(self.data_file, &quot;w&quot;, encoding=self.coding) as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+
+    def handle_request(self, request: Request) -&gt; Response:
+        if request.method == &quot;GET&quot;:
+            with open(
+                &quot;task5/server/template_grades.html&quot;, &quot;r&quot;, encoding=self.coding
+            ) as f:
+                template = f.read()
+
+            data = self.load_data()
+            rows = &quot;&quot;.join(
+                f&quot;&lt;tr&gt;&lt;td&gt;{d}&lt;/td&gt;&lt;td&gt;{', '.join(m)}&lt;/td&gt;&lt;/tr&gt;\n&quot;
+                for d, m in data.items()
+            )
+
+            body = template.replace(&quot;{{rows}}&quot;, rows).encode(self.coding)
+            headers = (
+                f&quot;Content-Length: {len(body)}\r\n&quot;
+                f&quot;Content-Type: text/html; charset={self.coding}\r\n&quot;
+            ).encode(self.coding)
+            return Response(200, &quot;OK&quot;, headers, body)
+
+        elif request.method == &quot;POST&quot;:
+            discipline = request.body.get(&quot;discipline&quot;)
+            mark = request.body.get(&quot;mark&quot;)
+            if not discipline or not mark:
+                return Response(400, &quot;Bad Request&quot;)
+
+            data = self.load_data()
+            if discipline not in data:
+                data[discipline.strip()] = []
+            data[discipline].append(str(mark))
+            self.save_data(data)
+
+            headers = (&quot;Location: /\r\nContent-Length: 0\r\n&quot;).encode(self.coding)
+            return Response(303, &quot;See Other&quot;, headers, b&quot;&quot;)
+
+        else:
+            return Response(405, &quot;Method Not Allowed&quot;)
+
+    def send_response(self, conn, response: Response):
+        res_line = f&quot;HTTP/1.1 {response.status} {response.reason}\r\n&quot;
+
+        headers_text = response.headers.decode(self.coding, errors=&quot;ignore&quot;)
+        if &quot;Content-Length&quot; not in headers_text:
+            headers_text += f&quot;Content-Length: {len(response.body)}\r\n&quot;
+        if &quot;Content-Type&quot; not in headers_text:
+            headers_text += f&quot;Content-Type: text/html; charset={self.coding}\r\n&quot;
+
+        full_response = (res_line + headers_text + &quot;\r\n&quot;).encode(
+            self.coding
+        ) + response.body
+        conn.sendall(full_response)
+
+
+if __name__ == &quot;__main__&quot;:
+    server = MyHTTPServer(&quot;localhost&quot;, 14905)
+    server.serve_forever()
+</code></pre>
+<h3 id="server-output">server output</h3>
+<p><img alt="image alt" src="../images/task5_server.png" /></p>
+<h2 id="client">client</h2>
+<h3 id="client-code">client code</h3>
+<pre><code class="language-python">
+import socket
+import json
+
+HOST = &quot;localhost&quot;
+PORT = 14905
+CODING = &quot;utf-8&quot;
+
+
+def send_post_req(discipline: str, mark: str):
+    body = json.dumps({&quot;discipline&quot;: discipline, &quot;mark&quot;: mark})
+    body_bytes = body.encode(CODING)
+
+    request = (
+        f&quot;POST / HTTP/1.1\r\n&quot;
+        f&quot;Host: {HOST}:{PORT}\r\n&quot;
+        f&quot;Content-Type: application/json\r\n&quot;
+        f&quot;Content-Length: {len(body_bytes)}\r\n&quot;
+        f&quot;Connection: close\r\n&quot;
+        f&quot;\r\n&quot;
+    ).encode(CODING) + body_bytes
+
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+        sock.connect((HOST, PORT))
+        sock.sendall(request)
+
+        response = sock.recv(4096)
+
+    return response.decode(CODING, errors=&quot;replace&quot;)
+
+
+if __name__ == &quot;__main__&quot;:
+    try:
+        while True:
+            discipline = input(&quot;\nEnter the name of the discipline: &quot;).strip().lower()
+            while True:
+                try:
+                    mark = float(input(&quot;Enter the score: &quot;).strip())
+                    if not 0 &lt;= mark &lt;= 100:
+                        print(
+                            &quot;\033[91mInput must be greater than zero and smaller than 100!\033[0m&quot;
+                        )
+                        continue
+                    break
+                except ValueError:
+                    print(&quot;\033[91mPlease enter a valid number!\033[0m&quot;)
+
+            resp = send_post_req(discipline, mark)
+            print(&quot;\nServer response:&quot;)
+            print(resp.split(&quot;\r\n\r\n&quot;, 1))
+
+    except KeyboardInterrupt:
+        print(&quot;\n\nInterrupted by user. Goodbye!&quot;)
+</code></pre>
+<h3 id="client-output">Client Output</h3>
+<p>client 1:</p>
+<p><img alt="client Output" src="../images/task5_client1.png" /></p>
+<p>client 2:</p>
+<p><img alt="client Output" src="../images/task5_client2.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
